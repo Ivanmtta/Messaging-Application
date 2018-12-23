@@ -1,0 +1,80 @@
+body{
+	font-family: "Segoe UI";
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+	background-color: #f4f3f6;
+}
+
+h1{
+	color: #568f8f;
+	text-align: center;
+}
+
+#messages{
+	background-color: white;
+	overflow-y: auto;
+	height: 400px;
+	margin-bottom: 20px;
+}
+
+li{
+	padding: 10px;
+	margin: 10px;
+	width: 75%;
+	background-color: #dad7df;
+	overflow: hidden;
+	border-radius: 25px;
+}
+
+#message{
+	box-sizing: border-box;
+	resize: none;
+	width: 100%;
+	margin-bottom: 10px;
+	height: 75px;
+	border: none;
+}
+
+#send{
+	float: right;
+	width: 100%;
+}
+
+input{
+	margin-left: 10px;
+	float: right;
+	border: none;
+	height: 25px;
+}
+
+#button{
+	border: none;
+	cursor: pointer;
+	background-color: #568f8f;
+	color: white;
+	width: 100px;
+	height: 45px;
+	font-size: 15px;
+}
+#button:hover{
+	background-color: #45bebf;
+}
+
+#user{
+	padding: 10px;
+}
+
+/*mobile*/
+@media(max-width: 600px){
+	body{
+		width: 75%;
+	}
+	li{
+		width: 80%;
+		margin-left: 0px;
+	}
+	#user{
+		width: 50%;
+	}
+}
