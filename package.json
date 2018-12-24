@@ -1,0 +1,24 @@
+{
+  "name": "webbase-messaging-application",
+  "version": "1.0.0",
+  "description": "Real-time chat application that sends and shows messages",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivanmtta/Webbase-Messaging-Application.git"
+  },
+  "author": "Ivan Mota",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivanmtta/Webbase-Messaging-Application/issues"
+  },
+  "homepage": "https://github.com/Ivanmtta/Webbase-Messaging-Application#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
