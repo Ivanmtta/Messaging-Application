@@ -12,4 +12,9 @@ io.sockets.on("connection", newConnection);
 
 function newConnection(socket){
 	console.log("New Connection: " + socket.id);
+
+	socket.on("sendFromClient", (msg)=>{
+		//io.sockets.emit("sendFromServer", msg);
+		socket.broadcast.emit("sendFromServer", msg);
+	});
 }

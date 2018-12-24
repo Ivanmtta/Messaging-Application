@@ -2,6 +2,9 @@ var socket;
 
 window.onload = function(){
 	socket = io.connect(window.location.host);
+	socket.on("sendFromServer", (msg)=>{
+		console.log("received: " + msg);
+	});
 }
 
 function sendPressed(){
@@ -10,8 +13,10 @@ function sendPressed(){
 	if(textMessage.value == "" || userName.value == ""){
 		return;
 	}
-	createMessage(userName.value + ": " + textMessage.value, "fromclient");
+	var msg = userName.value + ": " + textMessage.value;
+	createMessage(msg, "fromclient");
 	textMessage.value = "";
+	socket.emit("sendFromClient", msg);
 }
 
 function createMessage(msg, user){
