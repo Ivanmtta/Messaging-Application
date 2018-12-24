@@ -1,3 +1,9 @@
+var socket;
+
+window.onload = function(){
+	socket = io.connect(window.location.host);
+}
+
 function sendPressed(){
 	var textMessage = document.getElementById("message");
 	var userName = document.getElementById("user");
