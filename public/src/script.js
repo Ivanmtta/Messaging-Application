@@ -3,7 +3,7 @@ var socket;
 window.onload = function(){
 	socket = io.connect(window.location.host);
 	socket.on("sendFromServer", (msg)=>{
-		console.log("received: " + msg);
+		createMessage(msg, "fromServer");
 	});
 }
 
