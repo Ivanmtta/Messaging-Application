@@ -9,14 +9,15 @@
 	<body>
 		<h1>messaging app</h1>
 		<div id = "messages">
-			<ul>
+			<ul id = "messagelist">
 				<li>Send a message!</li>
 			</ul>
 		</div>
 		<textarea id = "message" placeholder = "Say something!"></textarea>
 		<div id = "send">
-			<input id = "button" type = "submit" value = "send">
+			<input id = "button" type = "submit" value = "send" onclick = "sendPressed()">
 			<input id = "user" type = "text" placeholder = "Your name">
 		</div>
+		<script src = "./src/script.js"></script>
 	</body>
 </html>
