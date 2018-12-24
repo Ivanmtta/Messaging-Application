@@ -4,15 +4,25 @@ function sendPressed(){
 	if(textMessage.value == "" || userName.value == ""){
 		return;
 	}
-	showMessage(userName.value + ": " + textMessage.value);
+	createMessage(userName.value + ": " + textMessage.value, "fromclient");
 	textMessage.value = "";
 }
 
-function showMessage(msg){
+function createMessage(msg, user){
 	var newMsg = document.createElement("li");
 	var msgText = document.createTextNode(msg);
-	newMsg.setAttribute("id", "fromclient");
+	newMsg.setAttribute("id", user);
 	newMsg.appendChild(msgText);
+	addMessage(newMsg);
+}
+
+function addMessage(newMsg){
 	var msgList = document.getElementById("messagelist");
 	msgList.appendChild(newMsg);
+	scrollToBottom();
+}
+
+function scrollToBottom(){
+	var messages = document.getElementById("messages");
+	messages.scrollTop = messages.scrollHeight;
 }
