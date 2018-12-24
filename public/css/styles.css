@@ -65,6 +65,12 @@ input{
 	padding: 10px;
 }
 
+#fromclient{
+	background-color: #568f8f;
+	float: right;
+	margin-top: 0px;
+}
+
 /*mobile*/
 @media(max-width: 600px){
 	body{
