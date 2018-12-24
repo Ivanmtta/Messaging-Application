@@ -10,7 +10,11 @@ window.onload = function(){
 function sendPressed(){
 	var textMessage = document.getElementById("message");
 	var userName = document.getElementById("user");
-	if(textMessage.value == "" || userName.value == ""){
+	if(textMessage.value == ""){
+		return;
+	}
+	else if(userName.value == ""){
+		alert("You must enter a username");
 		return;
 	}
 	var msg = userName.value + ": " + textMessage.value;
